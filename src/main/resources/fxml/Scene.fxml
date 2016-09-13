@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="tech.wi11.scav.FetchController" fx:id="mainGrid" prefHeight="600.0" prefWidth="600.0" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+	<Label text="API Key" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+	<TextField fx:id="apiKey" text="" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+	<Button layoutX="126" layoutY="90" text="Get sites" onAction="#requestSites" fx:id="requestSitesButton" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+	<GridPane fx:id="siteButtonsGrid" GridPane.columnIndex="1" GridPane.rowIndex="4" ></GridPane>
+	<Label fx:id="selectSiteLabel" text="Select a site to retrieve all its tests. Tests with a render time of 0 are ignored, since the site probably failed to respond." GridPane.columnIndex="1" GridPane.rowIndex="5" wrapText="true" ></Label>
+	<TextArea fx:id="resultArea" GridPane.columnIndex="1" GridPane.rowIndex="6" GridPane.vgrow="ALWAYS" ></TextArea>
+	<Label fx:id="copyLabel" GridPane.columnIndex="1" GridPane.rowIndex="7" wrapText="true" text="Ready for copying and pasting into a spreadsheet program." ></Label>
+</GridPane>
